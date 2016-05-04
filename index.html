@@ -14,41 +14,45 @@
 </head>
 <body>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container hero__container">
             <a href="#day" style="display: block;">
                 <img src="img/jamesandkoo.jpg" class="avatar" />
                 <img src="img/logo.svg" class="hero__logo" />
             </a>
         </div>
-        <div class="container container--large hero__container">
-            <nav class="nav">
-                <div class="nav__item">
-                    <a href="#day" class="icon icon--active" id="icon-day">
-                        <div class="icon__tap">
-                            <i class="fa fa-glass"></i>
-                        </div>
-                        <span class="icon__label">The day</span>
-                    </a>
+        <div class="container hero__container">
+            <nav class="nav" id="js-nav">
+                <div class="nav__row">
+                    <div class="nav__item">
+                        <a href="#day" class="icon icon--active" id="icon-day">
+                            <div class="icon__tap">
+                                <i class="fa fa-glass"></i>
+                            </div>
+                            <span class="icon__label">The day</span>
+                        </a>
+                    </div>
+                    <div class="nav__item">
+                        <a href="#location" class="icon" id="icon-location">
+                            <div class="icon__tap">
+                                <i class="fa fa-map"></i>
+                            </div>
+                            <span class="icon__label">Location</span>
+                        </a>
+                    </div>
+                    <div class="nav__item">
+                        <a href="#gifts" class="icon" id="icon-gifts">
+                            <div class="icon__tap">
+                                <i class="fa fa-gift"></i>
+                            </div>
+                            <span class="icon__label">Gifts</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="nav__item">
-                    <a href="#location" class="icon" id="icon-location">
-                        <div class="icon__tap">
-                            <i class="fa fa-map"></i>
-                        </div>
-                        <span class="icon__label">Location</span>
-                    </a>
-                </div>
-                <div class="nav__item">
-                    <a href="#gifts" class="icon" id="icon-gifts">
-                        <div class="icon__tap">
-                            <i class="fa fa-gift"></i>
-                        </div>
-                        <span class="icon__label">Gifts</span>
-                    </a>
+                <div class="nav__footer">
+                    <a href="https://www.surveymonkey.com/r/KL8NM9Z" target="_blank" class="btn btn--block btn--primary btn--large nav__action">RSVP</a>
                 </div>
             </nav>
-            <a href="https://www.surveymonkey.com/r/KL8NM9Z" target="_blank" class="btn btn--block btn--primary btn--large hero__action">RSVP</a>
         </div>
     </section>
     <div class="wrapper">
@@ -104,12 +108,14 @@
                 <div class="container">
                     <h3>Turn our dreams into a reality..</h3>
                     <p>We are saving up to buy a lion, any cash gifts to realise this dream will be greatly appreciated.</p>
-                    <a href="https://www.surveymonkey.com/r/KL8NM9Z" target="_blank" class="btn btn--block btn--primary btn--large show-mobile">RSVP</a>
                 </div>
             </div>
         </section>
     </div>
     <script>
+        var hero = document.querySelector("#hero"),
+            heroHeight = hero.offsetHeight;
+
         function initMap() {
             var myLatLng = { lat: -32.7805258, lng: 151.3137384 };
             // Create a map object and specify the DOM element for display.
@@ -125,6 +131,21 @@
                 map: map
             });
         }
+
+        function testScroll(position) {
+        }
+
+        window.addEventListener("scroll", function() {
+            console.log("running");
+            var mobNavHeight = document.querySelector("#js-nav").offsetHeight;
+            if(window.pageYOffset >= heroHeight)  {
+                document.querySelector("#js-nav").classList.add("nav--sticky")
+                document.querySelector("body").style.paddingBottom = mobNavHeight + "px";
+            } else {
+                document.querySelector("#js-nav").classList.remove("nav--sticky")
+                document.querySelector("body").style.paddingBottom = "0";
+            }
+        });
 
         window.addEventListener("hashchange", function(event) {
             var active = window.location.hash.substr(1);
