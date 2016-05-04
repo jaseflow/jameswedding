@@ -1,0 +1,45 @@
+@media(min-width: 1024px) {
+
+    html { font-size: 18px }
+
+    .icon__tap,
+    .icon__tap i { transition: all 0.2s ease }
+
+    .icon__tap:hover {
+        border-color: transparent;
+        background-color: rgba(0,0,0,0.2);
+        color: #fff;
+    }
+
+    .icon--active .icon__tap {
+        border-color: transparent;
+        background-color: rgba(0,0,0,0.2);
+        color: #fff;
+    }
+    
+    .icon--active i {
+        transform: scale(1.25);
+    }
+
+    .icon__tap:hover i { transform: scale(1.25) }
+
+    .btn { transition: all 0.2s ease }
+
+    .header h2 { font-size: 4em }
+
+    .header--day { 
+        background-image: url(../img/day-large.jpg);
+        background-position: center;
+    }
+
+    .header--gifts {
+        background-image: url(../img/gifts-large.jpg);
+        background-position: bottom center;
+    }
+
+    .header--location {
+        background-image: url(../img/location-large.jpg);
+        background-position: center;
+    }
+
+}

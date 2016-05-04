@@ -1,0 +1,23 @@
+@media(min-width: 768px) {
+
+    .hero {
+        transform: translate3d(0,0,0);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 22.5rem;
+    }
+
+    body {
+        padding-left: 22.5rem;
+    }
+
+    .page {
+        min-height: 100vh;
+    }
+
+    .header { height: 50vh; }
+
+    .show-mobile { display: none; }
+
+}

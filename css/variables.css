@@ -1,0 +1,9 @@
+/* Green */
+:root {
+    --primary-color: rgba(72,122,175,1);
+    --secondary-color: #fff;
+    --btn-bg-color: #eee;
+    --btn-color: #1D4269;
+    --btn-primary-bg-color: #EFDB69;
+    --btn-primary-color: #1D4269;
+}

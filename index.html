@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+	<title>The Wedding of Kirrilli & James</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ipad.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lora:400,700,400italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container hero__container">
+            <a href="#day" style="display: block;">
+                <img src="img/jamesandkoo.jpg" class="avatar" />
+                <img src="img/logo.svg" class="hero__logo" />
+            </a>
+        </div>
+        <div class="container container--large hero__container">
+            <nav class="nav">
+                <div class="nav__item">
+                    <a href="#day" class="icon icon--active" id="icon-day">
+                        <div class="icon__tap">
+                            <i class="fa fa-glass"></i>
+                        </div>
+                        <span class="icon__label">The day</span>
+                    </a>
+                </div>
+                <div class="nav__item">
+                    <a href="#location" class="icon" id="icon-location">
+                        <div class="icon__tap">
+                            <i class="fa fa-map"></i>
+                        </div>
+                        <span class="icon__label">Location</span>
+                    </a>
+                </div>
+                <div class="nav__item">
+                    <a href="#gifts" class="icon" id="icon-gifts">
+                        <div class="icon__tap">
+                            <i class="fa fa-gift"></i>
+                        </div>
+                        <span class="icon__label">Gifts</span>
+                    </a>
+                </div>
+            </nav>
+            <a href="#" class="btn btn--block btn--primary btn--large hero__action">RSVP</a>
+        </div>
+    </section>
+    <div class="wrapper">
+        <section class="page">
+            <header class="header header--day" id="day">
+                <h2>The day</h2>
+            </header>
+            <div class="content">
+                <div class="container">
+                    <h3>Circa 1876</h3>
+                    <p>The venue is located off of Broke Road, Pokolbin which is quite apt really, we are definitely going to be broke after paying for you mob to drink beer and eat food all day.</p>
+                    <p><a href="#location" class="btn">See location <i class="fa fa-chevron-down"></i></a></p>
+                    <h3>What time to be there</h3>
+                    <p>The ceremony starts at 3.30pm, that's New South Wales time for all you Queenslanders please don't be an hour late or Koo will be very upset!</p>
+                    <p>After the ceremony is done and dusted the wedding party will go off and have photographs taken for an hour or so, during that time you will be eating canapes and drinking.</p>
+                    <p>It's a free bar where beer and wine will be provided up until we get booted out of the venue. Last orders are at 11pm with closing time scheduled for 11.30pm, for any folk who want the night to continue the groomsman have a house on Mcdonalds Road which will be hosting the afterparty.</p>
+                    <h3>What to wear</h3>
+                    <p>Smart Casual is our chosen attire.</p>
+                    <p>What does smart casual mean? No jeans, no flip flops (thongs) but don't worry too much you aren't going for an interview! </p>
+                </div>
+            </div>
+        </section>
+        <section class="page">
+            <header class="header header--location" id="location">
+                <h2>Location</h2>
+            </header>
+            <div class="content">
+                <div class="container">
+                    <h3>Parking</h3>
+                    <p>There is plenty of parking on site for people who don't want to drink (If you are one of these people I don't want to know who you are as I want to rescind your invitation with immediate effect).</p>
+                    <p>We are planning to organise two minibuses to drop people home from 10.30 onwards so if you want to make the most of this service please let us know in the RSVP section.</p>
+                    <h3>Getting there</h3>
+                    <div id="map" class="google-map"></div>
+                    <h4>Flying</h4>
+                    <p>If you are flying in from the greatest country on the planet (England) then &emdash; </p>
+                    <ol>
+                        <li>you are a very lucky soul, and;</li>
+                        <li>you should take note of the following:</li>
+                    </ol>
+                    <p>Pokolbin is located in New South Wales which is 2 hours north of Sydney by car, the easiest/cheapest option would be to fly into Sydney and fly out of Sydney then you won't have to worry about organising connecting flights from Brisbane.</p>
+                    <h4>Accommodation</h4>
+                    <p>Circa 1876 (the venue) is not far from the centre of Pokolbin, therfore accommodation availability shouldn't be a problem. If there are enough of you, you can either rent a house through Air BnB or Stayz or alternativley you can book hotel rooms through Expedia.com. Peppers Convent is the closest hotel only 100m away from the venue.</p>
+                    <h4>Renting a car</h4>
+                    <p>You can either rent a car through Expedia.com from Sydney Airport if you are an international guest or from Newcastle Airport if you are flying in from Brisvegas. (I am not getting paid for product placement I promise!!)</p>
+                </div>
+            </div>
+        </section>
+        <section class="page">
+            <header class="header header--gifts" id="gifts">
+                <h2>Gifts</h2>
+            </header>
+            <div class="content">
+                <div class="container">
+                    <h3>Turn our dreams into a reality..</h3>
+                    <p>We are saving up to buy a lion, any cash gifts to realise this dream will be greatly appreciated.</p>
+                    <a href="#" class="btn btn--block btn--primary btn--large show-mobile">RSVP</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function initMap() {
+            var myLatLng = { lat: -32.7805258, lng: 151.3137384 };
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                scrollwheel: false,
+                zoom: 8,
+                disableDefaultUI: true
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map
+            });
+        }
+
+        window.addEventListener("hashchange", function(event) {
+            var active = window.location.hash.substr(1);
+            document.querySelector(".icon--active").classList.remove("icon--active");
+            document.querySelector("#icon-" + active).classList.add("icon--active");
+        });
+
+    </script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNqmjiF8cC_2U9XrGvAdqDWToM2AFc44&callback=initMap"
+        async defer></script>
+	
+</body>
+</html>
