@@ -6,6 +6,11 @@
         text-align: center;
         padding-top: 0.375rem;
         padding-bottom: 0.4375rem;
+        opacity: 0.6;
+    }
+
+    .icon--active {
+        opacity: 1;
     }
 
     .icon--active i {
@@ -24,6 +29,7 @@
     }
 
     .icon__label {
+        font-weight: bold;
         font-size: 0.625em;
     }
 

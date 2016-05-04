@@ -6,6 +6,10 @@
 
     .header h2 { font-size: 4em }
 
+    .header {
+        background-attachment: fixed;
+    }
+
     .header--day { 
         background-image: url(../img/day-large.jpg);
         background-position: center;
