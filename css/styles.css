@@ -280,7 +280,6 @@ img { max-width: 100% }
     z-index: 10;
     padding: 0;
     background: var(--primary-color);
-    animation: fadeInUp 0.25s ease forwards;
 }
 
 .nav__row {
@@ -288,10 +287,6 @@ img { max-width: 100% }
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem; 
-}
-
-.nav__action {
-    animation: fadeInUp 0.4s 1.25s ease forwards;
 }
 
 .nav__row {
@@ -308,8 +303,6 @@ img { max-width: 100% }
 /* Entering animations */
 
 .hero__logo,
-.hero__action,
-.nav,
 .wrapper {
     opacity: 0;
 }
@@ -320,10 +313,6 @@ img { max-width: 100% }
 
 .hero__logo {
     animation: fadeInUp 0.25s 1s ease forwards;
-}
-
-.nav {
-    animation: fadeInDown 0.4s 1.25s ease forwards;
 }
 
 .wrapper {
