@@ -119,11 +119,37 @@ img { max-width: 100% }
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+    position: relative;
 }
 
 .hero__logo {
     margin: 0 auto;
     display: block;
+}
+
+.hero__content {
+    position: relative;
+}
+
+@keyframes moveBg {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.hero__bg {
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/hearts.svg) no-repeat;
+    background-size: cover;
+    animation: moveBg 20s ease forwards;
 }
 
 .hero__container {
