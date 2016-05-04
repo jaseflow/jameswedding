@@ -66,8 +66,8 @@ img { max-width: 100% }
 
 .btn {
     display: block;
-    height: 2.75em;
-    line-height: 2.75em;
+    height: 2.75rem;
+    line-height: 2.75rem;
     font-size: 1em;
     font-weight: bold;
     color: var(--btn-color);
@@ -80,7 +80,7 @@ img { max-width: 100% }
 .btn--primary {
     background: var(--btn-primary-bg-color);
     font-family: "Amatic SC", cursive;
-    font-size: 1.625em;
+    font-size: 1.5em;
     color: var(--btn-primary-color);
     font-weight: bold;
     border: 2px solid transparent;
