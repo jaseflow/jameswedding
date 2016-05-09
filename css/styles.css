@@ -96,7 +96,7 @@ img { max-width: 100% }
     display: block;
     height: 2.75rem;
     line-height: 2.75rem;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: "Amatic SC", sans-serif;
     font-weight: bold;
     color: var(--btn-color);
