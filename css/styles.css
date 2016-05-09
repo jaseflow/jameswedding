@@ -92,6 +92,20 @@ img { max-width: 100% }
     border: 2px solid transparent;
 }
 
+.btn--secondary {
+    display: block;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    font-size: 1em;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: bold;
+    color: var(--btn-color);
+    background-color: var(--btn-bg-color);
+    border-radius: 0.375rem;
+    text-align: center;
+    text-decoration: none;
+}
+
 .avatar {
     display: block;
     border-radius: 50%;
